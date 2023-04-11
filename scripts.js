@@ -71,21 +71,10 @@ let isEarlier = correctDate.getTime() < holidays[christmas].date.getTime()
 // Check if the new date is earlier than the current date
 console.log('New date is earlier:', isEarlier)
 
-// Update the copied object if the new date is earlier
-if (isEarlier) {
-    copied.date = correctDate
-}
-
 // Display the changes made to the copied object
 console.log(`ID change: false`)
 console.log(`Name change: ${copied.name}`)
 console.log(`Date change: ${correctDate.getDate().toString().padStart(2, '0')}/${(correctDate.getMonth() + 1).toString().padStart(2, '0')}/${correctDate.getFullYear()}`)
-
-// Find the first and last holiday dates of the year
-let holidayDates = Object.values(holidays).map(h => h.date)
-let firstHolidayDates = new Date(Math.min(...holidayDates))
-let lastHolidayDates = new Date(Math.max(...holidayDates))
-
 
 // Format and display the first and last holiday dates
 console.log(holidays[9].date.toLocaleDateString("en-ZA"));
