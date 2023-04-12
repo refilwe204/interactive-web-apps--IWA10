@@ -74,11 +74,11 @@ console.log('New date is earlier:', isEarlier)
 // Display the changes made to the copied object
 console.log(`ID change: false`)
 console.log(`Name change: ${copied.name}`)
-console.log(`Date change: ${correctDate.getDate().toString().padStart(2, '0')}/${(correctDate.getMonth() + 1).toString().padStart(2, '0')}/${correctDate.getFullYear()}`)
+console.log(`Date change: ${correctDate.getDate().toString()}/${(correctDate.getMonth() + 1).toString()}/${correctDate.getFullYear()}`)
 
 // Format and display the first and last holiday dates
-console.log(holidays[9].date.toLocaleDateString("en-ZA"));
-console.log(holidays[2].date.toLocaleDateString("en-ZA"));
+console.log("first holiday:" + " " + holidays[9].date.toLocaleDateString("en-ZA"));
+console.log("Last holiday:" + " " + holidays[2].date.toLocaleDateString("en-ZA"));
 
 const randomHolidayIndex = Math.floor(Math.random() * 9)
 const randomHoliday = holidays[randomHolidayIndex]
@@ -88,4 +88,4 @@ const randomHolidayDate = randomHoliday.date instanceof Date ?
   `${randomHoliday.date.getFullYear()}` :
   randomHoliday.date
 
-console.log (randomHolidayDate)
+console.log ("Random holiday:" + " " + randomHolidayDate)
