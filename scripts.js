@@ -56,6 +56,8 @@ const holidays = {
 const christmas = 6
 const futureId = 9
 
+//Do not change the code above this comment
+
 // Check if an item has been assigned to the futureId key
 console.log(holidays[futureId] ? holidays[futureId].name : `ID ${futureId} not created yet`)
 
@@ -79,6 +81,7 @@ console.log(`Date change: ${correctDate.getDate().toString()}/${(correctDate.get
 // Format and display the first and last holiday dates
 console.log("first holiday:" + " " + holidays[9].date.toLocaleDateString("en-ZA"));
 console.log("Last holiday:" + " " + holidays[2].date.toLocaleDateString("en-ZA"));
+
 
 const randomHolidayIndex = Math.floor(Math.random() * 9)
 const randomHoliday = holidays[randomHolidayIndex]
